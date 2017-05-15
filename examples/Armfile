@@ -1,0 +1,8 @@
+OUT(main.exe):IN(main.o , header.o)
+CMD(g++ main.o header.o -o main.exe)
+
+OUT(main.o):IN(main.cpp , header.h)
+CMD(g++ -c main.cpp -o main.o)
+
+OUT(header.o):IN(header.cpp , header.h)
+CMD(g++ -c header.cpp -o header.o)
